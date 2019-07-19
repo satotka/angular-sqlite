@@ -9,4 +9,9 @@ describe('DatabaseService', () => {
     const service: DatabaseService = TestBed.get(DatabaseService);
     expect(service).toBeTruthy();
   });
+
+  it('shoule be execute ddl', () => {
+    const service: DatabaseService = TestBed.get(DatabaseService);
+    service.executeDDL("CREATE TABLE MyTable (SampleColumn)");
+  });
 });
